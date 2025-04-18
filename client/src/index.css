@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Custom gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent;
+  }
+  
+  /* Enhance focus styles for accessibility */
+  .focus-ring {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  /* Animation for pulsing border */
+  .pulse-border {
+    @apply border-primary-300 animate-pulse;
+  }
+}
